@@ -1,0 +1,10 @@
+content	randomsig	jar:chrome/randomsig.jar!/content/
+locale	randomsig	en	jar:chrome/randomsig.jar!/locale/en/
+locale	randomsig	de	jar:chrome/randomsig.jar!/locale/de/
+locale	randomsig	pl	jar:chrome/randomsig.jar!/locale/pl/
+locale	randomsig	fr	jar:chrome/randomsig.jar!/locale/fr/
+skin	randomsig	classic/1.0	jar:chrome/randomsig.jar!/skin/
+
+overlay	chrome://messenger/content/messenger.xul	chrome://randomsig/content/randomsigOverlay.xul
+overlay	chrome://browser/content/browser.xul	chrome://randomsig/content/randomsigOverlay.xul
+

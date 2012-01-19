@@ -1,0 +1,50 @@
+label.link {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+	-moz-user-focus: ignore;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+label.h1 {
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid gray;
+	margin-bottom: 5px;
+}
+
+label.h2 {
+	font-weight: bold;
+	font-size: larger;
+	border-bottom: 1px solid gray;
+	margin-bottom: 5px;
+	margin-top: 7px;
+}
+
+tabpanel.help {
+	background-color: white;
+	padding: 5px 3px;
+}
+
+description.pre {
+	background-color: lightgray;
+	border: 1px solid gray;
+	margin: 0 5px 0 5px;
+	padding: 3px;
+	white-space: pre;
+	font-family: Courier;
+}
+
+image.help {
+	-moz-appearance: none !important;
+	background-image: url(chrome://randomsig/skin/images/help.png);
+	background-repeat : no-repeat;
+	width: 14px !important;
+	height: 14px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	cursor: pointer;
+}
+

@@ -1,0 +1,57 @@
+<!ENTITY randomsig.options "random(signature) Opções">
+<!ENTITY randomsig.options-title "Assinaturas:">
+<!ENTITY randomsig.options-source "Fonte da assinatura">
+<!ENTITY randomsig.options-target "Alvo da assinatura">
+<!ENTITY randomsig.options-interval "Intervalo">
+<!ENTITY randomsig.options-new "Novo…">
+<!ENTITY randomsig.options-edit "Editar…">
+<!ENTITY randomsig.options-delete "Excluir">
+<!ENTITY randomsig.options-about "Sobre…">
+<!ENTITY randomsig.new "Nova assinatura">
+<!ENTITY randomsig.edit "Editar assinatura">
+<!ENTITY randomsig.editnew-source "Fonte da assinatura">
+<!ENTITY randomsig.editnew-cookiefile "Arquivo com &quot;biscoito da sorte&quot;:">
+<!ENTITY randomsig.editnew-cookiedir "Diretório com um arquivo texto para cada assinatura:">
+<!ENTITY randomsig.editnew-target "Alvo da assinatura">
+<!ENTITY randomsig.editnew-file "Arquivo de assinatura:">
+<!ENTITY randomsig.editnew-options "Opções de assinatura">
+<!ENTITY randomsig.editnew-prefix "Prefixo da assinatura">
+<!ENTITY randomsig.editnew-prefix-desc "Entre com o prefixo para a assinatura aleatória selecionada:">
+<!ENTITY randomsig.editnew-suffix "Sufixo da assinatura:">
+<!ENTITY randomsig.editnew-suffix-desc "Entre com o sufixo para assinatura aleatório selecionada:">
+<!ENTITY randomsig.editnew-interval1 "Atualizar a assinatura a cada">
+<!ENTITY randomsig.editnew-interval2 "segundos">
+<!ENTITY randomsig.choose "Escolher…">
+<!ENTITY randomsig.about "Sobre random(signature)">
+<!ENTITY randomsig.about-about "Sobre">
+<!ENTITY randomsig.about-description "random(signature) atualiza um arquivo de assinatura em intervalos regulares. Lê uma arquivo com &quot;biscoito da sorte&quot; ou um diretório com um arquivo de texto (.txt) por assinatura e escreve aleatoriamente uma assinatura no arquivo de assinatura.">
+<!ENTITY randomsig.about-created "Criado por">
+<!ENTITY randomsig.about-translators "Tradutores">
+<!ENTITY randomsig.help-title "Ajuda do random(signature)">
+<!ENTITY randomsig.help-tab-source "Fonte da assinatura">
+<!ENTITY randomsig.help-tab-target "Alvo da assinatura">
+<!ENTITY randomsig.help-tab-options "Opções de assinatura">
+<!ENTITY randomsig.help-tab-cookie "&quot;Biscoito da sorte&quot;">
+<!ENTITY randomsig.help-link-cookie "Saiba mais sobre o arquivo com &quot;biscoito da sorte&quot;">
+<!ENTITY randomsig.help-link-source "Saiba mais sobre a origem da assinatura">
+<!ENTITY randomsig.help-link-options "Saiba mais sobre o prefixo e o sufixo">
+<!ENTITY randomsig.help-link-target "Saiba mais sobre o destino da assinatura">
+<!ENTITY randomsig.help-source-title-source "Fonte de assinatura">
+<!ENTITY randomsig.help-source-desc-source "A origem da assinatura diz ao random(signature) onde procurar por assinaturas que podem ser escolhidos aleatoriamente. A origem pode ser um único arquivo (conhecido como &quot;biscoito da sorte&quot;) ou um diretório.">
+<!ENTITY randomsig.help-source-title-cookie "&quot;Biscoito da sorte&quot;">
+<!ENTITY randomsig.help-source-desc-cookie "Se a fonte é um arquivo com &quot;biscoito da sorte&quot;, random(signature) irá aleatoriamente pegar uma assinatura.">
+<!ENTITY randomsig.help-source-title-directory "Diretório">
+<!ENTITY randomsig.help-source-desc-directory "Cada assinatura tem que estar num arquivo de texto separado (um arquivo com a extensão .txt). Sub pastas serão ignorados. random(signature) irá aleatoriamente selecione um destes arquivos de texto para ler a assinatura. Todo o arquivo será considerado uma assinatura.">
+<!ENTITY randomsig.help-target-title "Destino da assinatura">
+<!ENTITY randomsig.help-target-desc1 "O arquivo de destino é onde a assinatura completa será escrita. O conteúdo da assinatura no arquivo será atualizado em intervalos regulares como definido nas opções da assinatura. A assinatura completa consiste do prefixo (se passado), a assinatura selecionada aleatoriamente da origem e o sufixo (se passado).">
+<!ENTITY randomsig.help-target-desc2 "Você pode definir o arquivo de destino como arquivo de assinatura nas configurações de suas contas. Toda vez que compor um novo e-mail, o arquivo de assinatura será lido. Se random(signature) atualizou a assinatura no decorrer do tempo, uma nova assinatura aleatória será exibida na janela de composição.">
+<!ENTITY randomsig.help-options-title-prefix "Prefixo">
+<!ENTITY randomsig.help-options-desc-prefix "O prefixo é algum texto que será acrescentada antes de cada assinatura aleatória. Isto é opcional.">
+<!ENTITY randomsig.help-options-title-suffix "Sufixo">
+<!ENTITY randomsig.help-options-desc-suffix "O sufixo é algum texto que será adicionada após cada assinatura aleatória. Isto é opcional.">
+<!ENTITY randomsig.help-options-title-interval "Intervalo">
+<!ENTITY randomsig.help-options-desc-interval "O intervalo define random(signature) quantas vezes a assinatura deve ser atualizada.">
+<!ENTITY randomsig.help-cookie-title "&quot;Biscoito da sorte&quot;">
+<!ENTITY randomsig.help-cookie-desc "Um &quot;biscoito da sorte&quot; é um arquivo de texto que contém as assinaturas. Cada assinatura é separado por uma linha com o caractere &#37; nele. O primeiro e a última linha do arquivo não deve conter o caractere &#37;.">
+<!ENTITY randomsig.help-cookie-example-title "Exemplo">
+<!ENTITY randomsig.help-cookie-example-desc "Este é um exemplo de um arquivo &quot;biscoito da sorte&quot;:">

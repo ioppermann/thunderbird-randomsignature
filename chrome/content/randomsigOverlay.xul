@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<overlay id="randomsig-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://randomsig/content/scripts/randomsig.js"/>
+<script type="application/x-javascript" src="chrome://randomsig/content/scripts/randomsig_prefs.js"/>
+<script type="application/x-javascript" src="chrome://randomsig/content/scripts/randomsig_init.js"/>
+
+<menupopup id="taskPopup">
+	<menuitem id="randomsig-menuitem" label="random(signature)" oncommand="randomsigOpenOptions()" insertbefore="devToolsSeparator"/>
+</menupopup>
+
+</overlay>

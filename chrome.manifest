@@ -1,0 +1,12 @@
+content	randomsig	chrome/content/
+locale	randomsig	en-US	chrome/locale/en-US/
+locale	randomsig	en	chrome/locale/en-US/
+locale	randomsig	de	chrome/locale/de/
+locale	randomsig	pl	chrome/locale/pl/
+locale	randomsig	fr	chrome/locale/fr/
+locale	randomsig	pt-BR	chrome/locale/pt-BR/
+locale	randomsig	sv	chrome/locale/sv/
+skin	randomsig	classic/1.0	chrome/skin/
+
+overlay	chrome://messenger/content/messenger.xul	chrome://randomsig/content/randomsigOverlay.xul
+overlay	chrome://browser/content/browser.xul	chrome://randomsig/content/randomsigOverlay.xul

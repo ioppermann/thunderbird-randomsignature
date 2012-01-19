@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<RDF:RDF
+	xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+	xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<RDF:Description
+		RDF:about="urn:mozilla:install-manifest"
+		em:id="randomsig@oppermann.ch"
+		em:version="1.5"
+		em:type="2"
+		em:name="random(signature)"
+		em:description="Updates a given signature file in regular intervals"
+		em:creator="Ingo Oppermann"
+		em:iconURL="chrome://randomsig/skin/images/icon.png"
+		em:aboutURL="chrome://randomsig/content/randomsigAbout.xul"
+		em:optionsURL="chrome://randomsig/content/randomsigOptions.xul"
+		>
+		<em:contributor>Waclaw Jacek</em:contributor>
+		<em:contributor>ioreker</em:contributor>
+		<em:contributor>humbertosartini</em:contributor>
+		<em:contributor>Lakrits</em:contributor>
+		<em:targetApplication RDF:resource="rdf:thunderbird"/>
+	</RDF:Description>
+	<RDF:Description
+		RDF:about="rdf:thunderbird"
+		em:id="{3550f703-e582-4d05-9a08-453d09bdfdc6}"
+		em:minVersion="2.0"
+		em:maxVersion="3.1.*"
+		/>
+</RDF:RDF>

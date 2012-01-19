@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="randomsig.css" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://randomsig/locale/randomsig.dtd">
+
+<dialog id="randomsig-options"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	title="&randomsig.new;"
+	buttons="accept,cancel,help"
+	ondialogaccept="randomsigSaveNewSignature();"
+	ondialogcancel="return true;">
+
+<script type="application/x-javascript" src="chrome://randomsig/content/scripts/randomsig_prefs.js"/>
+<script type="application/x-javascript" src="chrome://randomsig/content/scripts/randomsig_options.js"/>
+
+<stringbundleset id="stringbundleset">
+	<stringbundle id="randomsig-stringbundle" src="chrome://randomsig/locale/randomsig.properties"/>
+</stringbundleset>
+
+<vbox flex="1" width="400">
+	<groupbox>
+		<caption align="center">
+			<label value="&randomsig.editnew-source;"/>
+			<image class="help" onclick="randomsigHelp(0)"/>
+		</caption>
+		<radiogroup id="randomsig-new-source" value="file">
+			<grid flex="1">
+				<columns>
+					<column flex="1"/>
+					<column/>
+				</columns>
+			
+				<rows>
+					<hbox align="center">
+						<radio value="file" label="&randomsig.editnew-cookiefile;" selected="true"/>
+						<image class="help" onclick="randomsigHelp(3)"/>
+					</hbox>
+				
+					<row>
+						<textbox id="randomsig-new-cookiefile"/>
+						<button label="&randomsig.choose;" oncommand="randomsigBrowseCookieFile('new'); return false;"/>
+					</row>
+				
+					<radio value="directory" label="&randomsig.editnew-cookiedir;"/>
+				
+					<row>
+						<textbox id="randomsig-new-cookiedirectory"/>
+						<button label="&randomsig.choose;" oncommand="randomsigBrowseCookieDirectory('new'); return false;"/>
+					</row>
+				</rows>
+			</grid>
+		</radiogroup>
+	</groupbox>
+	
+	<groupbox>
+		<caption align="center">
+			<label value="&randomsig.editnew-target;"/>
+			<image class="help" onclick="randomsigHelp(1)"/>
+		</caption>
+		<grid flex="1">
+			<columns>
+				<column flex="1"/>
+				<column/>
+			</columns>
+			
+			<rows>
+				<label value="&randomsig.editnew-file;"/>
+
+				<row>
+					<textbox id="randomsig-new-signaturefile"/>
+					<button label="&randomsig.choose;" oncommand="randomsigBrowseSignatureFile('new'); return false;"/>
+				</row>
+			</rows>
+		</grid>
+	</groupbox>
+	
+	<groupbox>
+		<caption align="center">
+			<label value="&randomsig.editnew-options;"/>
+			<image class="help" onclick="randomsigHelp(2)"/>
+		</caption>
+		<tabbox>
+			<tabs>
+				<tab label="&randomsig.editnew-prefix;"/>
+				<tab label="&randomsig.editnew-suffix;"/>
+			</tabs>
+			<tabpanels>
+				<tabpanel>
+					<vbox flex="1">
+						<description>
+							&randomsig.editnew-prefix-desc;
+						</description>
+						<textbox id="randomsig-new-prefix" multiline="true" rows="4" flex="1"/>
+					</vbox>
+				</tabpanel>
+				<tabpanel>
+					<vbox flex="1">
+						<description>
+							&randomsig.editnew-suffix-desc;
+						</description>
+						<textbox id="randomsig-new-suffix" multiline="true" rows="4" flex="1"/>
+					</vbox>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+
+		<grid flex="1">
+			<columns>
+				<column/>
+				<column/>
+				<column/>
+			</columns>
+
+			<rows>
+				<row align="center">
+					<label value="&randomsig.editnew-interval1;"/>
+					<textbox id="randomsig-new-interval" value="30" style="width: 40px"/>
+					<label value="&randomsig.editnew-interval2;"/>
+				</row>
+			</rows>
+		</grid>
+	</groupbox>
+</vbox>
+
+</dialog>

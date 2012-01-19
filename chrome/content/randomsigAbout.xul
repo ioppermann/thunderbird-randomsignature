@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://randomsig/locale/randomsig.dtd">
+
+<dialog id="randomsig-about"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	title="&randomsig.about;"
+	buttons="accept">
+
+<vbox flex="1" width="250" style="background-color: white; border: 1px solid black; -moz-border-radius: 9px;">
+	<description style="font-weight: bold; font-size: 2em">random(signature)</description>
+	<description style="font-weight: bold; color: grey">Version 1.5</description>
+	<spacer height="15"/>
+	<description style="font-weight: bold">&randomsig.about-about;</description>
+	<description style="margin-left: 1em">&randomsig.about-description;</description>
+	<spacer height="15"/>
+	<description style="font-weight: bold">&randomsig.about-created;</description>
+	<description style="margin-left: 1em">Ingo Oppermann</description>
+	<spacer height="15"/>
+	<description style="font-weight: bold">&randomsig.about-translators;</description>
+	<description style="margin-left: 1em">Waclaw Jacek, ioreker, humbertosartini, Lakrits</description>
+</vbox>
+
+</dialog>

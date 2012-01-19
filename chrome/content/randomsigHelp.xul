@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="randomsig.css" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://randomsig/locale/randomsig.dtd">
+
+<dialog id="randomsig-options"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	title="&randomsig.help-title;"
+	buttons="accept"
+	ondialogaccept="return true;"
+	onload="randomsigLoadHelpSection();">
+
+<script type="application/x-javascript" src="chrome://randomsig/content/scripts/randomsig_help.js"/>
+
+<vbox flex="1" width="600">
+
+	<spacer height="1em"/>
+
+	<tabbox id="randomsig-helptabs">
+		<tabs>
+			<tab label="&randomsig.help-tab-source;"/>
+			<tab label="&randomsig.help-tab-target;"/>
+			<tab label="&randomsig.help-tab-options;"/>
+			<tab label="&randomsig.help-tab-cookie;"/>
+		</tabs>
+		<tabpanels>
+			<tabpanel class="help">
+				<!-- Source -->
+				<vbox flex="1">
+					<label value="&randomsig.help-source-title-source;" class="h1"/>
+					<description>
+						&randomsig.help-source-desc-source;
+					</description>
+
+					<label value="&randomsig.help-source-title-cookie;" class="h2"/>
+					<description>
+						&randomsig.help-source-desc-cookie;
+					</description>
+
+					<label class="link" value="&randomsig.help-link-cookie;" onclick="randomsigSetHelpSection(3);"/>
+
+					<label value="&randomsig.help-source-title-directory;" class="h2"/>
+					<description>
+						&randomsig.help-source-desc-directory;
+					</description>
+				</vbox>
+			</tabpanel>
+			<tabpanel class="help">
+				<!-- Target -->
+				<vbox flex="1">
+					<label value="&randomsig.help-target-title;" class="h1"/>
+					<description>
+						&randomsig.help-target-desc1;
+					</description>
+
+					<label class="link" value="&randomsig.help-link-source;" onclick="randomsigSetHelpSection(0);"/>
+					<label class="link" value="&randomsig.help-link-options;" onclick="randomsigSetHelpSection(2);"/>
+
+					<description>
+						&randomsig.help-target-desc2;
+					</description>
+				</vbox>
+			</tabpanel>
+			<tabpanel class="help">
+				<!-- Options -->
+				<vbox flex="1">
+					<label value="&randomsig.help-options-title-prefix;" class="h1"/>
+					<description>
+						&randomsig.help-options-desc-prefix;
+					</description>
+
+					<label value="&randomsig.help-options-title-suffix;" class="h1"/>
+					<description>
+						&randomsig.help-options-desc-suffix;
+					</description>
+
+					<label value="&randomsig.help-options-title-interval;" class="h1"/>
+					<description>
+						&randomsig.help-options-desc-interval;
+					</description>
+
+					<label class="link" value="&randomsig.help-link-target;" onclick="randomsigSetHelpSection(1);"/>
+				</vbox>
+			</tabpanel>
+			<tabpanel class="help">
+				<!-- Cookie -->
+				<vbox flex="1">
+					<label value="&randomsig.help-cookie-title;" class="h1"/>
+					<description>
+						&randomsig.help-cookie-desc;
+					</description>
+
+					<label value="&randomsig.help-cookie-example-title;" class="h2"/>
+
+					<description>
+						&randomsig.help-cookie-example-desc;
+					</description>
+
+					<description class="pre">"A mathematician is a device for turning
+coffee into theorems"
+   -- P. Erdos
+%
+"A witty saying proves nothing."
+   -- Voltaire
+%
+"Computers are useless. They can only
+give you answers."
+   -- Pablo Picasso</description>
+				</vbox>
+			</tabpanel>
+		</tabpanels>
+	</tabbox>
+</vbox>
+
+</dialog>

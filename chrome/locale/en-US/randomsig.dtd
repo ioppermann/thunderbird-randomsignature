@@ -1,0 +1,62 @@
+<!ENTITY randomsig.options "random(signature) Options">
+<!ENTITY randomsig.options-title "Signatures:">
+<!ENTITY randomsig.options-source "Signature source">
+<!ENTITY randomsig.options-target "Signature target">
+<!ENTITY randomsig.options-interval "Interval">
+<!ENTITY randomsig.options-new "New ...">
+<!ENTITY randomsig.options-edit "Edit ...">
+<!ENTITY randomsig.options-delete "Delete">
+<!ENTITY randomsig.options-about "About ...">
+
+<!ENTITY randomsig.new "New signature">
+<!ENTITY randomsig.edit "Edit signature">
+
+<!ENTITY randomsig.editnew-source "Signature source">
+<!ENTITY randomsig.editnew-cookiefile "Fortune cookie file:">
+<!ENTITY randomsig.editnew-cookiedir "Directory with one text file per signature:">
+<!ENTITY randomsig.editnew-target "Signature target">
+<!ENTITY randomsig.editnew-file "Signature file:">
+<!ENTITY randomsig.editnew-options "Signature options">
+<!ENTITY randomsig.editnew-prefix "Signature prefix:">
+<!ENTITY randomsig.editnew-prefix-desc "Enter the prefix for the randomly selected signature:">
+<!ENTITY randomsig.editnew-suffix "Signature suffix:">
+<!ENTITY randomsig.editnew-suffix-desc "Enter the suffix for the randomly selected signature:">
+<!ENTITY randomsig.editnew-interval1 "Update the signature every">
+<!ENTITY randomsig.editnew-interval2 "seconds">
+
+<!ENTITY randomsig.choose "Choose ...">
+
+<!ENTITY randomsig.about "About random(signature)">
+<!ENTITY randomsig.about-about "About">
+<!ENTITY randomsig.about-description "random(signature) updates a given signature file in regular intervals. It reads a fortune cookie file or a directory with one text file (.txt) per signature and writes a randomly selected singature into the signature file.">
+<!ENTITY randomsig.about-created "Created by">
+<!ENTITY randomsig.about-translators "Translators">
+
+<!ENTITY randomsig.help-title "random(signature) Help">
+<!ENTITY randomsig.help-tab-source "Signature source">
+<!ENTITY randomsig.help-tab-target "Signature target">
+<!ENTITY randomsig.help-tab-options "Signature options">
+<!ENTITY randomsig.help-tab-cookie "Fortune cookie">
+<!ENTITY randomsig.help-link-cookie "Learn more about the fortune cookie file">
+<!ENTITY randomsig.help-link-source "Learn more about the signature source">
+<!ENTITY randomsig.help-link-options "Learn more about the prefix and the suffix">
+<!ENTITY randomsig.help-link-target "Learn more about the signature target">
+<!ENTITY randomsig.help-source-title-source "Signature source">
+<!ENTITY randomsig.help-source-desc-source "The signature source tells random(signature) where to look for signatures that can be picked randomly. The source can be either a single file (a so called fortune cookie file) or a directory.">
+<!ENTITY randomsig.help-source-title-cookie "Fortune Cookie">
+<!ENTITY randomsig.help-source-desc-cookie "If the source is a fortune cookie file, random(signature) will randomly pick a signatures out of it.">
+<!ENTITY randomsig.help-source-title-directory "Directory">
+<!ENTITY randomsig.help-source-desc-directory "Every signature has to be in a separate text file (a file with the ending .txt). Subdirectories will be ignored. random(singature) will randomly select one of these text files to read the signature out of it. The whole file will be considered as one signature.">
+<!ENTITY randomsig.help-target-title "Signature target">
+<!ENTITY randomsig.help-target-desc1 "The signature target is the file the complete signature will be written to. The contents of the signature target file gets updated in regular intervals as defined in the signature options. The complete signature consists of the prefix (if given), the randomly selected signature from the signature source and the suffix (if given).">
+<!ENTITY randomsig.help-target-desc2 "You can set the signature target file as signature file in your account settings. Everytime you compose a new e-mail, the signature file will be read. If random(signature) updated the signature target file in the meantime, a new randomly selected signature will show up in the composer window.">
+<!ENTITY randomsig.help-options-title-prefix "Prefix">
+<!ENTITY randomsig.help-options-desc-prefix "The prefix is some text that will be prepended to every randomly selected signature. This is optional.">
+<!ENTITY randomsig.help-options-title-suffix "Suffix">
+<!ENTITY randomsig.help-options-desc-suffix "The suffix is some text that will be appended to every randomly selected signature. This is optional.">
+<!ENTITY randomsig.help-options-title-interval "Interval">
+<!ENTITY randomsig.help-options-desc-interval "The interval tells random(signature) how often the signature target file should be updated.">
+<!ENTITY randomsig.help-cookie-title "Fortune Cookie">
+<!ENTITY randomsig.help-cookie-desc "A fortune cookie file is a text file that contains the signatures. Every signature is separated by a single line only with the &#37;-char in it. The first and the last line of the fortune cookie file should not contain the &#37;-char.">
+<!ENTITY randomsig.help-cookie-example-title "Example">
+<!ENTITY randomsig.help-cookie-example-desc "This is an example of a fortune cookie file:">

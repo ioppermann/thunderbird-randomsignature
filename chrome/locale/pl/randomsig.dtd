@@ -1,0 +1,57 @@
+<!ENTITY randomsig.options "random(signature) - opcje">
+<!ENTITY randomsig.options-title "Sygnatury:">
+<!ENTITY randomsig.options-source "Źródło sygnatur">
+<!ENTITY randomsig.options-target "Plik docelowy">
+<!ENTITY randomsig.options-interval "Okres">
+<!ENTITY randomsig.options-new "Nowa ...">
+<!ENTITY randomsig.options-edit "Edytuj ...">
+<!ENTITY randomsig.options-delete "Usuń">
+<!ENTITY randomsig.options-about "O rozszerzeniu ...">
+<!ENTITY randomsig.new "Nowa sygnatura">
+<!ENTITY randomsig.edit "Edytuj sygnaturę">
+<!ENTITY randomsig.editnew-source "Źródło sygnatur">
+<!ENTITY randomsig.editnew-cookiefile "Plik z listą sygnatur:">
+<!ENTITY randomsig.editnew-cookiedir "Katalog z plikami tekstowymi zawierającymi pojedyncze sygnatury:">
+<!ENTITY randomsig.editnew-target "Plik docelowy">
+<!ENTITY randomsig.editnew-file "Plik docelowy:">
+<!ENTITY randomsig.editnew-options "Opcje sygnatur">
+<!ENTITY randomsig.editnew-prefix "Prefiks sygnatur:">
+<!ENTITY randomsig.editnew-prefix-desc "Wprowadź prefiks dla losowo wybieranych sygnatur:">
+<!ENTITY randomsig.editnew-suffix "Sufiks sygnatur:">
+<!ENTITY randomsig.editnew-suffix-desc "Wprowadź sufiks dla losowo wybieranych sygnatur:">
+<!ENTITY randomsig.editnew-interval1 "Aktualizuj sygnaturę co">
+<!ENTITY randomsig.editnew-interval2 "sekund">
+<!ENTITY randomsig.choose "Wybierz ...">
+<!ENTITY randomsig.about "random(signature) - informacje">
+<!ENTITY randomsig.about-about "O rozszerzeniu">
+<!ENTITY randomsig.about-description "random(signature) aktualizuje wybrany plik z sygnaturą co dany okres czasu. Odczytuje on plik z listą sygnatur lub katalog z plikami tekstowymi (.txt) zawierającymi sygnatury i zapisuje losowo wybraną sygnaturę do tego pliku.">
+<!ENTITY randomsig.about-created "Autor">
+<!ENTITY randomsig.about-translators "Translators">
+<!ENTITY randomsig.help-title "random(signature) - pomoc">
+<!ENTITY randomsig.help-tab-source "Źródło sygnatur">
+<!ENTITY randomsig.help-tab-target "Plik docelowy">
+<!ENTITY randomsig.help-tab-options "Opcje sygnatur">
+<!ENTITY randomsig.help-tab-cookie "Plik z listą sygnatur">
+<!ENTITY randomsig.help-link-cookie "Dowiedz się więcej o pliku z listą sygnatur">
+<!ENTITY randomsig.help-link-source "Dowiedz się więcej o źródłach sygnatur">
+<!ENTITY randomsig.help-link-options "Dowiedz się więcej o prefiksie i sufiksie">
+<!ENTITY randomsig.help-link-target "Dowiedz się więcej o pliku docelowym">
+<!ENTITY randomsig.help-source-title-source "Źródło sygnatur">
+<!ENTITY randomsig.help-source-desc-source "Źródło sygnatur określa gdzie random(signature) ma szukać sygnatur, wśród których ma dokonać losowania. Źródłem tym może być zarówno pojedynczy plik zawierający listę sygnatur lub katalog.">
+<!ENTITY randomsig.help-source-title-cookie "Plik z listą sygnatur">
+<!ENTITY randomsig.help-source-desc-cookie "Jeżeli jako źródło sygnatur wybrany zostanie plik z ich listą, random(signature) wylosuje z niego jedną sygnaturę.">
+<!ENTITY randomsig.help-source-title-directory "Katalog">
+<!ENTITY randomsig.help-source-desc-directory "Każda sygnatura musi być zawarta w oddzielnym pliku tekstowym (o rozszerzeniu .txt, podkatalogi są ignorowane). random(signature) wybierze jeden z tych plików i ustawi jako sygnaturę całą zawartą w nim treść.">
+<!ENTITY randomsig.help-target-title "Plik docelowy">
+<!ENTITY randomsig.help-target-desc1 "Plik docelowy jest plikiem, do którego zostanie zapisana wygenerowana sygnatura. Zawartość tego pliku jest aktualizowana w regularnych odstępach czasowych określonych w opcjach rozszerzenia i składa się z prefiksu (jeżeli zostanie on podany), sygnatury wylosowanej z źródła sygnatur i sufiksu (również jeżeli zostanie on podany).">
+<!ENTITY randomsig.help-target-desc2 "Aby dodawać wygenerowane sygnatury do wiadomości ustaw plik docelowy jako plik z sygnaturą w oknie &quot;Konfiguracja kont&quot;. Podczas tworzenia nowej wiadomości plik docelowy zostanie odczytany, a jeżeli random(signature) zaktualizuje ten plik w międzyczasie sygnatura dodana do wiadomości również zostanie zaktualizowana.">
+<!ENTITY randomsig.help-options-title-prefix "Prefiks">
+<!ENTITY randomsig.help-options-desc-prefix "Prefiks jest tekstem, który zostanie dodany na początku każdej wylosowanej sygnatury. Wprowadzenie go jest opcjonalne.">
+<!ENTITY randomsig.help-options-title-suffix "Sufiks">
+<!ENTITY randomsig.help-options-desc-suffix "Prefiks jest tekstem, który zostanie dodany na końcu każdej wylosowanej sygnatury. Wprowadzenie go jest opcjonalne.">
+<!ENTITY randomsig.help-options-title-interval "Okres">
+<!ENTITY randomsig.help-options-desc-interval "Okres definiuje jak często random(signature) ma aktualizować plik docelowy.">
+<!ENTITY randomsig.help-cookie-title "Plik z listą sygnatur">
+<!ENTITY randomsig.help-cookie-desc "Plik z listą sygnatur jest plikiem tekstowym, który zawiera wiele sygnatur. Każda sygnatura powinna być oddzielona pustą linią zawierającą znak &#37;, przy czym linia ta nie powinna być umieszczany na początku i końcu pliku.">
+<!ENTITY randomsig.help-cookie-example-title "Przykład">
+<!ENTITY randomsig.help-cookie-example-desc "Oto przykład pliku z listą sygnatur:">

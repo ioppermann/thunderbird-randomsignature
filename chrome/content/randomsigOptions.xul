@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://randomsig/locale/randomsig.dtd">
+
+<dialog id="randomsig-options"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	title="&randomsig.options;"
+	buttons="accept"
+	ondialogaccept="return true;"
+	onload="randomsigLoadOptions(); return true;">
+
+<script type="application/x-javascript" src="chrome://randomsig/content/scripts/randomsig_prefs.js"/>
+<script type="application/x-javascript" src="chrome://randomsig/content/scripts/randomsig_options.js"/>
+
+<stringbundleset id="stringbundleset">
+	<stringbundle id="randomsig-stringbundle" src="chrome://randomsig/locale/randomsig.properties"/>
+</stringbundleset>
+
+<vbox flex="1" width="600">
+	<label value="&randomsig.options-title;"/>
+	<grid flex="1">
+		<columns>
+			<column flex="1"/>
+			<column/>
+		</columns>
+
+		<rows>
+			<row>
+				<listbox id="randomsig-list" seltype="single" onselect="randomsigSignatureSelected();">
+					<listhead>
+						<listheader label="&randomsig.options-source;"/>
+						<listheader label="&randomsig.options-target;"/>
+						<listheader label="&randomsig.options-interval;"/>
+					</listhead>
+					<listcols>
+						<listcol flex="1"/>
+						<listcol flex="1"/>
+						<listcol style="text-align: center"/>
+					</listcols>
+				</listbox>
+				<vbox>
+					<button label="&randomsig.options-new;" oncommand="randomsigOpenNewSignature();"/>
+					<button label="&randomsig.options-edit;" oncommand="randomsigOpenEditSignature();" id="randomsig-edit" disabled="true"/>
+					<button label="&randomsig.options-delete;" oncommand="randomsigDeleteSignature();" id="randomsig-delete" disabled="true"/>
+					<spacer flex="1"/>
+					<button label="&randomsig.options-about;" oncommand="randomsigAbout();"/>
+				</vbox>
+			</row>
+		</rows>
+	</grid>
+</vbox>
+
+</dialog>

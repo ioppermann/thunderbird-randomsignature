@@ -1,0 +1,57 @@
+<!ENTITY randomsig.options "Inställningar för random(signature)">
+<!ENTITY randomsig.options-title "Signaturer:">
+<!ENTITY randomsig.options-source "Signaturkälla">
+<!ENTITY randomsig.options-target "Signaturmål">
+<!ENTITY randomsig.options-interval "Intervall">
+<!ENTITY randomsig.options-new "Nytt...">
+<!ENTITY randomsig.options-edit "Redigera...">
+<!ENTITY randomsig.options-delete "Ta bort">
+<!ENTITY randomsig.options-about "Om...">
+<!ENTITY randomsig.new "Ny signatur">
+<!ENTITY randomsig.edit "Redigera signatur">
+<!ENTITY randomsig.editnew-source "Signaturkälla">
+<!ENTITY randomsig.editnew-cookiefile "Lyckokakefil:">
+<!ENTITY randomsig.editnew-cookiedir "Mapp med en textfil per signatur:">
+<!ENTITY randomsig.editnew-target "Signaturmål">
+<!ENTITY randomsig.editnew-file "Signaturfil:">
+<!ENTITY randomsig.editnew-options "Signaturalternativ">
+<!ENTITY randomsig.editnew-prefix "Signaturprefix:">
+<!ENTITY randomsig.editnew-prefix-desc "Ange prefixet för den slumpmässigt valda signaturen:">
+<!ENTITY randomsig.editnew-suffix "Signatursuffix:">
+<!ENTITY randomsig.editnew-suffix-desc "Ange suffixet för den slumpmässigt valda signaturen:">
+<!ENTITY randomsig.editnew-interval1 "Uppdatera signaturen var">
+<!ENTITY randomsig.editnew-interval2 "sekund">
+<!ENTITY randomsig.choose "Välj...">
+<!ENTITY randomsig.about "Om random(signature)">
+<!ENTITY randomsig.about-about "Om">
+<!ENTITY randomsig.about-description "random(signature) uppdaterar en given signaturfil med regelbundet intervall. Det läser en lyckokakefil (fortune cookie-fil) eller en mapp med en textfil (.txt) per signatur och skriver en slumpmässigt vald signatur till signaturfilen.">
+<!ENTITY randomsig.about-created "Skapat av">
+<!ENTITY randomsig.about-translators "Översättare">
+<!ENTITY randomsig.help-title "Hjälp om random(signature)">
+<!ENTITY randomsig.help-tab-source "Signaturkälla">
+<!ENTITY randomsig.help-tab-target "Signaturmål">
+<!ENTITY randomsig.help-tab-options "Signaturalternativ">
+<!ENTITY randomsig.help-tab-cookie "Lyckokaka">
+<!ENTITY randomsig.help-link-cookie "Läs mer om lyckokakefilerna">
+<!ENTITY randomsig.help-link-source "Läs mer om signaturkällan">
+<!ENTITY randomsig.help-link-options "Läs mer om prefixet och suffixet">
+<!ENTITY randomsig.help-link-target "Läs mer om signaturmålet">
+<!ENTITY randomsig.help-source-title-source "Signaturkälla">
+<!ENTITY randomsig.help-source-desc-source "Signaturkällan talar om för random(signature) var det skall leta efter signaturer som kan väljas slumpmässigt. Källan kan antingen vara en enskild fil (en s.k. lyckokakefil) eller en mapp.">
+<!ENTITY randomsig.help-source-title-cookie "Lyckokaka">
+<!ENTITY randomsig.help-source-desc-cookie "Om källan är en lyckokakefil, så kommer random(signature) att slumpmässigt välja en signatur från den.">
+<!ENTITY randomsig.help-source-title-directory "Mapp">
+<!ENTITY randomsig.help-source-desc-directory "Varje enskild signatur måste vara sparad i en separat textfil (en fil med filtillägget .txt). Undermappar kommer att ignoreras. random(signature) kommer slumpmässigt att välja en av dessa textfiler och läsa signaturen från den. Hela filen kommer att betraktas som en signatur.">
+<!ENTITY randomsig.help-target-title "Signaturmål">
+<!ENTITY randomsig.help-target-desc1 "Signaturmålet är den fil som den fullständiga signaturen kommer att skrivas till. Innehållet i signaturmålfilen uppdateras med ett regelbundet intervall som anges i signaturalternativen. Den fullständiga signaturen består av prefixet (om angivet), den slumpmässigt valda signaturen från signaturkällan och suffixet (om angivet).">
+<!ENTITY randomsig.help-target-desc2 "Du kan ange signaturmålfilen som signaturfil i dina kontoinställningar. Varje gång du skriver ett nytt e-brev, så kommer signaturfilen att läsas. Om random(signature) uppdaterar signaturmålfilen medan du skriver, så kommer en ny slumpmässigt vald signatur att visas i Skriv-fönstret.">
+<!ENTITY randomsig.help-options-title-prefix "Prefix">
+<!ENTITY randomsig.help-options-desc-prefix "Prefixet är en textsträng som kommer att bifogas i början av varje slumpmässigt vald signatur. Detta alternativ är valfritt.">
+<!ENTITY randomsig.help-options-title-suffix "Suffix">
+<!ENTITY randomsig.help-options-desc-suffix "Suffixet är en textsträng som kommer att bifogas i slutet av varje slumpmässigt vald signatur. Detta alternativ är valfritt.">
+<!ENTITY randomsig.help-options-title-interval "Intervall">
+<!ENTITY randomsig.help-options-desc-interval "Intervallet talar om för random(signature) hur ofta signaturmålfilen skall uppdateras.">
+<!ENTITY randomsig.help-cookie-title "Lyckokaka">
+<!ENTITY randomsig.help-cookie-desc "En lyckokakefil är en textfil som innehåller lyckokakesignaturerna. Varje signatur avgränsas av en ensam rad med endast ett procenttecken (&#37;) i sig. Den första och den sista raden i lyckokakefilen skall inte innehålla &#37;-tecknet.">
+<!ENTITY randomsig.help-cookie-example-title "Exempel">
+<!ENTITY randomsig.help-cookie-example-desc "Detta är ett exempel på en lyckokakefil:">
