@@ -1,3 +1,8 @@
+// https://developer.mozilla.org/en-US/docs/JavaScript_code_modules/FileUtils.jsm
+Components.utils.import("resource://gre/modules/FileUtils.jsm");
+// https://developer.mozilla.org/en-US/docs/JavaScript_code_modules/NetUtil.jsm
+Components.utils.import("resource://gre/modules/NetUtil.jsm");
+
 var randomsig = {
 	timer: {},
 	cookies: {},
@@ -39,7 +44,7 @@ var randomsig = {
 		if(signatures[0].length == 0)
 			signatures = new Array();
 
-		var cookiefile, signaturefile, interval, prefix, suffix;
+		var cookiefile, cookies, signaturefile, interval, prefix, suffix;
 
 		for(var i = 0; i < signatures.length; i++) {
 			interval = randomsigPrefs.getInt('signature.' + signatures[i] + '.interval', 0);
@@ -62,30 +67,14 @@ var randomsig = {
 
 	updateSignature: function(signatureid) {
 		this.getNewSignature(signatureid);
-		this.writeSignature(signatureid);
 
 		return;
 	},
 
 	writeSignature: function(signatureid) {
-		try {
-			netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-		} catch(e) {
-			return;
-		}
+		var file = new FileUtils.File(this.signaturefile[signatureid]);
 
-		var file = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
-
-		try {
-			file.initWithPath(this.signaturefile[signatureid]);
-		} catch(e) { return; }
-
-		if(file.exists() == false)
-			file.create(Components.interfaces.nsIFile.NORMAL_FILE_TYPE, 420);
-
-		var output = Components.classes["@mozilla.org/network/file-output-stream;1"].createInstance(Components.interfaces.nsIFileOutputStream);
-
-		output.init(file, 0x04 | 0x08 | 0x20, 420, 0);
+		var output = FileUtils.openSafeFileOutputStream(file);
 
 		var signature = this.signature[signatureid];
 
@@ -95,23 +84,19 @@ var randomsig = {
 		if(this.suffix[signatureid].length != 0)
 			signature = signature + "\n" + this.suffix[signatureid];
 
-		var result = output.write(signature, signature.length);
+		var converter = Components.classes["@mozilla.org/intl/scriptableunicodeconverter"].createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
+		converter.charset = "UTF-8";
+		var isignature = converter.convertToInputStream(signature);
 
-		output.close();
+		NetUtil.asyncCopy(isignature, output, function(status) {
+			output.close();
+		});
 
 		return;
 	},
 
 	getNewSignature: function(signatureid) {
-		try {
-			netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-		} catch (e) { return; }
-
-		var file = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
-
-		try {
-			file.initWithPath(this.cookies[signatureid]);
-		} catch(e) { return; }
+		var file = new FileUtils.File(this.cookies[signatureid]);
 
 		if(file.exists() == false || file.isReadable() == false)
 			return;
@@ -125,57 +110,69 @@ var randomsig = {
 	},
 
 	getNewSignatureFromFile: function(signatureid, file) {
-		var input = Components.classes["@mozilla.org/network/file-input-stream;1"].createInstance(Components.interfaces.nsIFileInputStream);
+		var self = this;
 
-		input.init(file, 0x01, 0444, 0);
-		input.QueryInterface(Components.interfaces.nsILineInputStream);
-
-		var line = {}, hasmore;
-		var cookie = 0, cookies = [];
-		cookies.push('');
-		do {
-			hasmore = input.readLine(line);
-
-			if(line.value == '%') {
-				cookies.push('');
-				cookie++;
+		NetUtil.asyncFetch(file, function(input, status) {
+			if(!Components.isSuccessCode(status)) {
+				return;
 			}
-			else {
-				if(cookies[cookie].length == 0)
-					cookies[cookie] = line.value;
-				else
-					cookies[cookie] = cookies[cookie] + "\n" + line.value;
+
+			var navailable = 0;
+			var filedata = '';
+			try {
+				do {
+					navailable = input.available();
+					if(navailable == 0)
+						break;
+
+					filedata += NetUtil.readInputStreamToString(input, navailable);
+				} while(navailable);
+
+				input.close();
+			} catch(e) {}
+
+			var content = filedata.split(/[\r\n]+/);
+
+			var line = '';
+			var cookie = 0, cookies = [];
+			cookies.push('');
+			for(var i in content) {
+				line = content[i];
+
+				if(line == '%') {
+					cookies.push('');
+					cookie++;
+				}
+				else {
+					if(cookies[cookie].length == 0)
+						cookies[cookie] = line;
+					else
+						cookies[cookie] = cookies[cookie] + "\n" + line;
+				}
 			}
-		} while(hasmore);
 
-		input.close();
+			if(cookies.length != 0) {
+				cookie = Math.floor(Math.random() * cookies.length);
+				self.signature[signatureid] = cookies[cookie];
+			}
+			else
+				self.signature[signatureid] = '';
 
-		if(cookies.length != 0) {
-			cookie = Math.floor(Math.random() * cookies.length);
-			this.signature[signatureid] = cookies[cookie];
-		}
-		else
-			this.signature[signatureid] = '';
-
-		delete(cookies);
+			self.writeSignature(signatureid);
+		});
 
 		return;
 	},
 
 	getNewSignatureFromDirectory: function(signatureid, directory) {
-		var enumerator = directory.directoryEntries;
+		var entries = directory.directoryEntries;
 
-		var file, files = [], hasmore;
+		var file, files = [];
 		var re = /\.(txt|html)$/;
-		do {
-			hasmore = enumerator.hasMoreElements();
-			if(hasmore == false)
-				break;
-
-			file = enumerator.getNext();
+		while(entries.hasMoreElements()) {
+			file = entries.getNext();
 
 			file.QueryInterface(Components.interfaces.nsIFile);
-			file.QueryInterface(Components.interfaces.nsILocalFile);
 
 			if(file.isFile() == false || file.isReadable() == false)
 				continue;
@@ -184,7 +181,7 @@ var randomsig = {
 				continue;
 
 			files.push(file);
-		} while(hasmore);
+		}
 
 		if(files.length == 0) {
 			this.signature[signatureid] = '';
@@ -194,26 +191,33 @@ var randomsig = {
 
 		file = files[Math.floor(Math.random() * files.length)];
 
-		var input = Components.classes["@mozilla.org/network/file-input-stream;1"].createInstance(Components.interfaces.nsIFileInputStream);
+		var self = this;
 
-		input.init(file, 0x01, 0444, 0);
-		input.QueryInterface(Components.interfaces.nsILineInputStream);
+		NetUtil.asyncFetch(file, function(input, status) {
+			if(!Components.isSuccessCode(status)) {
+				return;
+			}
 
-		var line = {}, cookie = '';
-		do {
-			hasmore = input.readLine(line);
+			var navailable = 0;
+			var filedata = '';
+			try {
+				do {
+					navailable = input.available();
+					if(navailable == 0)
+						break;
 
-			if(cookie.length == 0)
-				cookie = line.value;
-			else
-				cookie = cookie + "\n" + line.value;
-		} while(hasmore);
+					filedata += NetUtil.readInputStreamToString(input, navailable);
+				} while(navailable);
 
-		input.close();
+				input.close();
+			} catch(e) {}
 
-		this.signature[signatureid] = cookie;
+			var cookie = filedata.replace(/[\r\n]+/, "\n");
 
-		delete(files);
+			self.signature[signatureid] = cookie;
+
+			self.writeSignature(signatureid);
+		});
 
 		return;
 	}
