@@ -125,7 +125,7 @@ var randomsig = {
 					if(navailable == 0)
 						break;
 
-					filedata += NetUtil.readInputStreamToString(input, navailable);
+					filedata += NetUtil.readInputStreamToString(input, navailable, { charset: 'UTF-8', replacement: '?' });
 				} while(navailable);
 
 				input.close();
@@ -206,7 +206,7 @@ var randomsig = {
 					if(navailable == 0)
 						break;
 
-					filedata += NetUtil.readInputStreamToString(input, navailable);
+					filedata += NetUtil.readInputStreamToString(input, navailable, { charset: 'UTF-8', replacement: '?' });
 				} while(navailable);
 
 				input.close();
