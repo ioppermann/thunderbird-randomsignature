@@ -1,0 +1,57 @@
+<!ENTITY randomsig.options "random(signature)选项">
+<!ENTITY randomsig.options-title "签名：">
+<!ENTITY randomsig.options-source "签名源">
+<!ENTITY randomsig.options-target "签名目标">
+<!ENTITY randomsig.options-interval "间隔">
+<!ENTITY randomsig.options-new "新建...">
+<!ENTITY randomsig.options-edit "编辑...">
+<!ENTITY randomsig.options-delete "删除">
+<!ENTITY randomsig.options-about "关于...">
+<!ENTITY randomsig.new "新签名">
+<!ENTITY randomsig.edit "编辑签名">
+<!ENTITY randomsig.editnew-source "签名源">
+<!ENTITY randomsig.editnew-cookiefile "幸运cookie文件：">
+<!ENTITY randomsig.editnew-cookiedir "每个签名为一个文本文件的目录：">
+<!ENTITY randomsig.editnew-target "签名目标">
+<!ENTITY randomsig.editnew-file "签名文件：">
+<!ENTITY randomsig.editnew-options "签名选项">
+<!ENTITY randomsig.editnew-prefix "签名前缀：">
+<!ENTITY randomsig.editnew-prefix-desc "为随机选取的签名输入前缀：">
+<!ENTITY randomsig.editnew-suffix "签名后缀：">
+<!ENTITY randomsig.editnew-suffix-desc "为随机选取的签名输入后缀：">
+<!ENTITY randomsig.editnew-interval1 "更新签名每">
+<!ENTITY randomsig.editnew-interval2 "秒">
+<!ENTITY randomsig.choose "选择...">
+<!ENTITY randomsig.about "关于 random(signature)）">
+<!ENTITY randomsig.about-about "关于">
+<!ENTITY randomsig.about-description "random(signature)）顶起更新给定签名文件。它读取一个幸运cookie文件或者一个目录，目录中每个签名为一个文本文件（.txt），然后随机选取签名写入签名文件中。">
+<!ENTITY randomsig.about-created "创建者">
+<!ENTITY randomsig.about-translators "翻译人员">
+<!ENTITY randomsig.help-title "random(signature)帮助">
+<!ENTITY randomsig.help-tab-source "签名源">
+<!ENTITY randomsig.help-tab-target "签名目标">
+<!ENTITY randomsig.help-tab-options "签名选项">
+<!ENTITY randomsig.help-tab-cookie "幸运cookie">
+<!ENTITY randomsig.help-link-cookie "了解更多关于幸运cookie文件">
+<!ENTITY randomsig.help-link-source "了解更多关于签名源">
+<!ENTITY randomsig.help-link-options "了解更多关于前缀和后缀">
+<!ENTITY randomsig.help-link-target "了解更多关于签名目标">
+<!ENTITY randomsig.help-source-title-source "签名源">
+<!ENTITY randomsig.help-source-desc-source "签名源告诉 random(signature) 从哪里查找可随机选取的签名。签名源可以是单个文件（即所谓的幸运cookie文件）或一个目录。">
+<!ENTITY randomsig.help-source-title-cookie "幸运 Cookie">
+<!ENTITY randomsig.help-source-desc-cookie "如果签名源为幸运cookie文件， random(signature) 将从其中随机选取一个签名">
+<!ENTITY randomsig.help-source-title-directory "目录">
+<!ENTITY randomsig.help-source-desc-directory "每个签名位于分开的文本文档（.txt）中。子目录将被忽略。 random(singature) 将从这些文件中随机选取一个文件读取签名。整个文件将被视为一个签名。">
+<!ENTITY randomsig.help-target-title "签名目标">
+<!ENTITY randomsig.help-target-desc1 "签名目标是完整签名将被写入的文件。签名目标文件的内容将依据签名选项中的设置定期更新。完整的签名由前缀（如果有）、从签名源随机选取的签名、后缀（如果有）构成。">
+<!ENTITY randomsig.help-target-desc2 "您可以在账户设定中将签名目标设置为签名文件。每次您撰写新邮件时，签名文件将被读取。 如果在此期间 random(signature)刚好更新了签名文件，新的随机签名将被显示在编辑窗口内。">
+<!ENTITY randomsig.help-options-title-prefix "前缀">
+<!ENTITY randomsig.help-options-desc-prefix "前缀是放在每个随机选择的签名开头的文本。这是可选项。">
+<!ENTITY randomsig.help-options-title-suffix "后缀">
+<!ENTITY randomsig.help-options-desc-suffix "后缀是放在每个随机选择的签名末尾的文本。这是可选项。">
+<!ENTITY randomsig.help-options-title-interval "间隔">
+<!ENTITY randomsig.help-options-desc-interval "该间隔告诉 random(signature)每隔多久更新签名目标文件。">
+<!ENTITY randomsig.help-cookie-title "幸运cookie">
+<!ENTITY randomsig.help-cookie-desc "幸运cookie文件是一个包含签名的文本文件。该文件中每个签名通过仅包含&#37;字符的单行分隔开。该文件的第一行和最末行不能包含&#37;字符。">
+<!ENTITY randomsig.help-cookie-example-title "示例">
+<!ENTITY randomsig.help-cookie-example-desc "这是幸运cookie文件的一个示例：">
