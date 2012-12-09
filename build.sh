@@ -2,6 +2,7 @@
 
 BUILDDIR=./build
 BASEDIR=$(pwd)
+PREFIX=randomsig
 
 # Build script for randomsig@oppermann.ch
 # SYNOPSIS
@@ -20,13 +21,15 @@ fi
 
 VERSION=$1
 
-# Check if this version exists
-git tag | grep -q "^${VERSION}\$"
+if [ $VERSION != "HEAD" ]; then
+	# Check if this version exists
+	git tag | grep -q "^${VERSION}\$"
 
-if [ $? -ne 0 ]; then
-	echo "I don't know the given version (${VERSION})."
-	echo "Please check 'git tag' for available versions to be build."
-	exit 1
+	if [ $? -ne 0 ]; then
+		echo "I don't know the given version (${VERSION})."
+		echo "Please check 'git tag' for available versions to be build."
+		exit 1
+	fi
 fi
 
 echo "Version: ${VERSION}"
@@ -76,7 +79,12 @@ fi
 
 # Clone the local repository
 echo -n "Cloning to branch ${VERSION} ... "
-git clone --quiet --local --branch "${VERSION}" . "${TARGET}"
+
+if [ $VERSION != "HEAD" ]; then
+	git clone --quiet --local --branch "${VERSION}" . "${TARGET}"
+else
+	git clone --quiet --local . "${TARGET}"
+fi
 
 if [ $? -ne 0 ]; then
 	echo "failed"
@@ -116,10 +124,10 @@ files=$(find ./.build -type f)
 for file in ${files}; do
 	echo "   ${file}"
 
-	sed s/@@randomsig_version@@/${VERSION}/g ${file} > ${file}.tmp
+	sed s/@@${PREFIX}_version@@/${VERSION}/g ${file} > ${file}.tmp
 	mv ${file}.tmp ${file}
 
-	sed s/@@randomsig_commitid@@/${COMMITID}/g ${file} > ${file}.tmp
+	sed s/@@${PREFIX}_commitid@@/${COMMITID}/g ${file} > ${file}.tmp
 	mv ${file}.tmp ${file}
 done
 
@@ -128,7 +136,7 @@ echo "done"
 # ZIP the files to an XPI file
 echo "Creating XPI file ..."
 cd ./.build
-zip -r9v "${BASEDIR}/${BUILDDIR}/randomsig-${VERSION}.xpi" .
+zip -r9v "${BASEDIR}/${BUILDDIR}/${PREFIX}-${VERSION}.xpi" .
 
 if [ $? -ne 0 ]; then
 	cd "${BASEDIR}"
@@ -140,7 +148,7 @@ fi
 
 echo "done"
 
-echo "XPI: ${BASEDIR}/${BUILDDIR}/randomsig-${VERSION}.xpi";
+echo "XPI: ${BASEDIR}/${BUILDDIR}/${PREFIX}-${VERSION}.xpi";
 echo "Build for version ${VERSION} done!"
 
 cd "${BASEDIR}"
