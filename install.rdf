@@ -5,7 +5,7 @@
 	<RDF:Description
 		RDF:about="urn:mozilla:install-manifest"
 		em:id="randomsig@oppermann.ch"
-		em:version="1.6.1"
+		em:version="@@randomsig_version@@"
 		em:type="2"
 		em:name="random(signature)"
 		em:description="Updates a given signature file in regular intervals"
