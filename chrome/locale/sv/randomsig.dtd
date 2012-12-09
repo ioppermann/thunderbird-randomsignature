@@ -9,7 +9,7 @@
 <!ENTITY randomsig.options-about "Om...">
 <!ENTITY randomsig.new "Ny signatur">
 <!ENTITY randomsig.edit "Redigera signatur">
-<!ENTITY randomsig.editnew-source "Signaturkälla">
+<!ENTITY randomsig.editnew-source "Signaturkälla (UTF-8)">
 <!ENTITY randomsig.editnew-cookiefile "Lyckokakefil:">
 <!ENTITY randomsig.editnew-cookiedir "Mapp med en textfil per signatur:">
 <!ENTITY randomsig.editnew-target "Signaturmål">

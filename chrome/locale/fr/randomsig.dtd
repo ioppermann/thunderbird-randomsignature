@@ -9,7 +9,7 @@
 <!ENTITY randomsig.options-about "À propos…">
 <!ENTITY randomsig.new "Nouvelle signature">
 <!ENTITY randomsig.edit "Modifier la signature">
-<!ENTITY randomsig.editnew-source "Source de signatures">
+<!ENTITY randomsig.editnew-source "Source de signatures (UTF-8)">
 <!ENTITY randomsig.editnew-cookiefile "Fichier «fortune cookie» :">
 <!ENTITY randomsig.editnew-cookiedir "Répertoire contenant un fichier texte pour chaque signature">
 <!ENTITY randomsig.editnew-target "Cible de la signature">

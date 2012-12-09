@@ -9,7 +9,7 @@
 <!ENTITY randomsig.options-about "关于...">
 <!ENTITY randomsig.new "新签名">
 <!ENTITY randomsig.edit "编辑签名">
-<!ENTITY randomsig.editnew-source "签名源">
+<!ENTITY randomsig.editnew-source "签名源(UTF-8)">
 <!ENTITY randomsig.editnew-cookiefile "幸运cookie文件：">
 <!ENTITY randomsig.editnew-cookiedir "每个签名为一个文本文件的目录：">
 <!ENTITY randomsig.editnew-target "签名目标">

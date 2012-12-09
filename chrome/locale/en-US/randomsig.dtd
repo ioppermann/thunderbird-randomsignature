@@ -11,7 +11,7 @@
 <!ENTITY randomsig.new "New signature">
 <!ENTITY randomsig.edit "Edit signature">
 
-<!ENTITY randomsig.editnew-source "Signature source">
+<!ENTITY randomsig.editnew-source "Signature source (UTF-8 encoded)">
 <!ENTITY randomsig.editnew-cookiefile "Fortune cookie file:">
 <!ENTITY randomsig.editnew-cookiedir "Directory with one text file per signature:">
 <!ENTITY randomsig.editnew-target "Signature target">

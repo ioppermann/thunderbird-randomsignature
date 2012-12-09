@@ -9,7 +9,7 @@
 <!ENTITY randomsig.options-about "O rozszerzeniu ...">
 <!ENTITY randomsig.new "Nowa sygnatura">
 <!ENTITY randomsig.edit "Edytuj sygnaturę">
-<!ENTITY randomsig.editnew-source "Źródło sygnatur">
+<!ENTITY randomsig.editnew-source "Źródło sygnatur (UTF-8)">
 <!ENTITY randomsig.editnew-cookiefile "Plik z listą sygnatur:">
 <!ENTITY randomsig.editnew-cookiedir "Katalog z plikami tekstowymi zawierającymi pojedyncze sygnatury:">
 <!ENTITY randomsig.editnew-target "Plik docelowy">

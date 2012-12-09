@@ -10,7 +10,7 @@
 
 <vbox flex="1" width="250" style="background-color: white; border: 1px solid black; -moz-border-radius: 9px;">
 	<description style="font-weight: bold; font-size: 2em">random(signature)</description>
-	<description style="font-weight: bold; color: grey">Version 1.5</description>
+	<description style="font-weight: bold; color: grey">Version 1.6.1</description>
 	<spacer height="15"/>
 	<description style="font-weight: bold">&randomsig.about-about;</description>
 	<description style="margin-left: 1em">&randomsig.about-description;</description>
