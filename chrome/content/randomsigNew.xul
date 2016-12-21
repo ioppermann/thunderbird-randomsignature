@@ -18,7 +18,7 @@
 	<stringbundle id="randomsig-stringbundle" src="chrome://randomsig/locale/randomsig.properties"/>
 </stringbundleset>
 
-<vbox flex="1" width="400">
+<vbox flex="1" width="700">
 	<groupbox>
 		<caption align="center">
 			<label value="&randomsig.editnew-source;"/>
@@ -91,7 +91,7 @@
 						<description>
 							&randomsig.editnew-prefix-desc;
 						</description>
-						<textbox id="randomsig-new-prefix" multiline="true" rows="4" flex="1"/>
+						<textbox id="randomsig-new-prefix" multiline="true" rows="4" flex="1" class="monospace"/>
 					</vbox>
 				</tabpanel>
 				<tabpanel>
@@ -99,7 +99,7 @@
 						<description>
 							&randomsig.editnew-suffix-desc;
 						</description>
-						<textbox id="randomsig-new-suffix" multiline="true" rows="4" flex="1"/>
+						<textbox id="randomsig-new-suffix" multiline="true" rows="4" flex="1" class="monospace"/>
 					</vbox>
 				</tabpanel>
 			</tabpanels>
