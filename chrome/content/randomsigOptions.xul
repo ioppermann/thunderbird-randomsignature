@@ -17,7 +17,7 @@
 	<stringbundle id="randomsig-stringbundle" src="chrome://randomsig/locale/randomsig.properties"/>
 </stringbundleset>
 
-<vbox flex="1" width="600">
+<vbox flex="1" width="800">
 	<label value="&randomsig.options-title;"/>
 	<grid flex="1">
 		<columns>
